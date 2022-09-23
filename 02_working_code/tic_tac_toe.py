@@ -1,6 +1,8 @@
 # Import Modules
-import os
 from random import randint
+from os import system, name
+
+
 
 # Define game functions
 def display_board(board_state):
@@ -87,6 +89,14 @@ def reset_game():
         board_state[num] = ' '
     return board_state, p_count
 
+# Clear screen output for cleaner playing exerience
+def screen_refresh():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
 
 # ---------------------------------------------------------------------------------------- #
 ## GAME LOGIC ##
@@ -119,12 +129,12 @@ while game_on <= 19:
         initialize()
         display_board(board_state)
         game_on = 0
-        os.system('cls')
 
     # Prompt selection
     place = player_choice(p_count, p_dict, board_state)
 
     # Place marker and check for win or draw
+    screen_refresh()
     place_marker(board_state, p_dict, p_count, place)
     if check_win(board_state, p_dict, p_count) == True:
         print(f"GAME OVER - PLAYER {p_count} WINS !!!")
@@ -140,10 +150,6 @@ while game_on <= 19:
     else:
         p_count = 1
     game_on += 1
-    os.system('cls')
+
 
 print('Thanks for playing :)')
-
-## Debug status:
-# Everything is working and logic checks out. 
-# Need to add a screen clear function to claer the screen and it doesn't scroll every time
