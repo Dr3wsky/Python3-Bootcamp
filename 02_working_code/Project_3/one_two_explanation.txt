@@ -1,0 +1,5 @@
+The two files one.py and two.py serve to practice and show how modules are called into another script and explore the __name__ == "__main__" functionality in Python. 
+
+When either of the functions is called, it will run and print the top level as the running program name. 
+
+It will then use the __name__ == "__main__" logic, and print if it is running directly, or if it has been imported and is running as a module. 
