@@ -4,3 +4,4 @@ The goal is to document my pogress as I learn and improve my python skills, for 
 
 Udemy's Complete Python Bootcamp will work to improve my python skills and provide practice projects for portfolio building.
 
+Included in this is standalone, working python code used for milestone projects, debugging / IDE practice, and module creation.
