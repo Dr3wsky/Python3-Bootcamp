@@ -1,0 +1,9 @@
+The file myprogram.py imports a simple package made to explore and demonstrate how module packages are made, handled and run in Python.
+
+Specifically, how the folder stucture dictates modules based on the sub-folders in the package, and the use of __init__.py to create these packages.
+
+When myprogram.py is run, it imports the modules within MyMainPackage and MyMainPackage>SubPackage.
+
+It then runs the modules within main_script and my_sub_script respectively to show how the defined functions within scrips are handled as modules.
+
+This is the base-archetecture showing how much large projects are run, with user-deined functions run as python packages and modules. 
